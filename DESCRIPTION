@@ -1,0 +1,11 @@
+Package: ConvexHull
+Type: Package
+Title: Algorithme du parcours de Graham sur R
+Version: 1.0
+Date: 2020-12-14
+Author: Leyth Akrout
+Maintainer: Leyth Akrout <leyth_akrout@yahoo.com>
+Description: Ce package permet de retrouver l'enveloppe convexe d'un ensemble de points dans R^2. Il utilise l'algorithme de Graham de complèxité O(nlog(n)) et est programmer en R.
+License: GPL (>= 2)
+Imports: Rcpp (>= 1.0.5)
+LinkingTo: Rcpp

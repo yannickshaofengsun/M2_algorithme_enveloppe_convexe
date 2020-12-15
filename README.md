@@ -1,2 +1,2 @@
-# M2_algorithme-enveloppe-convexe
-Projet Algorithmique M2 data science a Universite d'evry 
+# repo_ConvexHull
+Algorithmes sous R du parcours de Graham pour le calcul de l'enveloppe convexe de points dans R^2  
