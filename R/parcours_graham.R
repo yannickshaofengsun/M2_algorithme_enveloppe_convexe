@@ -11,13 +11,15 @@ parcours_graham <- function(l){
     p=cbind(p,l[,i])
     i=i+1
   }
-  i=1
+  return(p)
+}
+
+dessin_env <- function(l){
+  p=parcours_graham(l)
   plot(l[1,], l[2,],
        xlab = "x", ylab = "y",main = "Enveloppe convexe des points affichés",
        pch = 19, frame = FALSE)
   lines(p[1,],p[2,],'l')
   lines(c(p[1,length(p[1,])],p[1,1]),c(p[2,length(p[1,])],p[2,1]),'l')
-  return(p)
 }
-
 
