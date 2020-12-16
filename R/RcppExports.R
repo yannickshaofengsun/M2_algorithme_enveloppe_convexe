@@ -5,3 +5,6 @@ rcpp_hello <- function() {
     .Call(`_convexe_rcpp_hello`)
 }
 
+cov <- function(v1,v2){
+  .Call(`_M2_algorithme-enveloppe-convexe_dist_Rcpp`, v1, v2)
+}
