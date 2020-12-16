@@ -1,7 +1,7 @@
 # Parcours de Graham
 Algorithmes sous R du parcours de Graham pour le calcul de l'enveloppe convexe de points dans R^2  
 Ce dépot contient plusieurs Fichier R et quelques exemples.  
-**Tous les algorithmes présent prennent en entrée une matrice de taille n*2 ou n correspond au nombres de points choisit dans R^2.**
+**Tous les algorithmes présent prennent en entrée une matrice de taille 2*n ou n correspond au nombres de points choisit dans R^2.**
 
 Le parcours de Graham commence par trouver un point pivot ( point de plus petite ordonnée ) et trie ensuite les autres points de manière croissante selon l'angle que fait l'axe des abscisses avec le segment joignant le pivot et le point courant.   
 Il intègre alors dans une nouvelle liste A le pivot et le point suivant et va à chaque étape considérer un nouveau point courant qui sera le suivant dans la liste triée B. Pour tous les points p dans la liste B tant que le segment formé par le dernier point dans la liste A et le point courant p est à droite du segment formé par les deux dernier points de la liste A on suprime de la liste A le dernier point. En sortant de la boucle on ajoute à la liste A le point courant p et on refait le même travail avec le point suivant.   
