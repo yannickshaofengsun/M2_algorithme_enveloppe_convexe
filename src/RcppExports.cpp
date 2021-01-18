@@ -17,14 +17,84 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// naif_convex_rcpp
-NumericMatrix naif_convex_rcpp(NumericMatrix list);
-RcppExport SEXP _ConvexHullLeyth_naif_convex_rcpp(SEXP listSEXP) {
+// fusion_cpp
+NumericMatrix fusion_cpp(NumericMatrix m1, NumericMatrix m2);
+RcppExport SEXP _ConvexHullLeyth_fusion_cpp(SEXP m1SEXP, SEXP m2SEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< NumericMatrix >::type list(listSEXP);
-    rcpp_result_gen = Rcpp::wrap(naif_convex_rcpp(list));
+    Rcpp::traits::input_parameter< NumericMatrix >::type m1(m1SEXP);
+    Rcpp::traits::input_parameter< NumericMatrix >::type m2(m2SEXP);
+    rcpp_result_gen = Rcpp::wrap(fusion_cpp(m1, m2));
+    return rcpp_result_gen;
+END_RCPP
+}
+// trifusion_cpp
+NumericMatrix trifusion_cpp(NumericMatrix t);
+RcppExport SEXP _ConvexHullLeyth_trifusion_cpp(SEXP tSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type t(tSEXP);
+    rcpp_result_gen = Rcpp::wrap(trifusion_cpp(t));
+    return rcpp_result_gen;
+END_RCPP
+}
+// listAngle_cpp
+NumericMatrix listAngle_cpp(NumericMatrix l);
+RcppExport SEXP _ConvexHullLeyth_listAngle_cpp(SEXP lSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type l(lSEXP);
+    rcpp_result_gen = Rcpp::wrap(listAngle_cpp(l));
+    return rcpp_result_gen;
+END_RCPP
+}
+// min_X_cpp
+int min_X_cpp(NumericMatrix X);
+RcppExport SEXP _ConvexHullLeyth_min_X_cpp(SEXP XSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
+    rcpp_result_gen = Rcpp::wrap(min_X_cpp(X));
+    return rcpp_result_gen;
+END_RCPP
+}
+// produit_vect_cpp
+int produit_vect_cpp(NumericVector A, NumericVector B, NumericVector C);
+RcppExport SEXP _ConvexHullLeyth_produit_vect_cpp(SEXP ASEXP, SEXP BSEXP, SEXP CSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericVector >::type A(ASEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type B(BSEXP);
+    Rcpp::traits::input_parameter< NumericVector >::type C(CSEXP);
+    rcpp_result_gen = Rcpp::wrap(produit_vect_cpp(A, B, C));
+    return rcpp_result_gen;
+END_RCPP
+}
+// next_point_cpp
+int next_point_cpp(NumericMatrix X, int i);
+RcppExport SEXP _ConvexHullLeyth_next_point_cpp(SEXP XSEXP, SEXP iSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
+    Rcpp::traits::input_parameter< int >::type i(iSEXP);
+    rcpp_result_gen = Rcpp::wrap(next_point_cpp(X, i));
+    return rcpp_result_gen;
+END_RCPP
+}
+// env_convex_javis_cpp
+NumericMatrix env_convex_javis_cpp(NumericMatrix X);
+RcppExport SEXP _ConvexHullLeyth_env_convex_javis_cpp(SEXP XSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type X(XSEXP);
+    rcpp_result_gen = Rcpp::wrap(env_convex_javis_cpp(X));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -41,7 +111,13 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_ConvexHullLeyth_col_erase2", (DL_FUNC) &_ConvexHullLeyth_col_erase2, 2},
-    {"_ConvexHullLeyth_naif_convex_rcpp", (DL_FUNC) &_ConvexHullLeyth_naif_convex_rcpp, 1},
+    {"_ConvexHullLeyth_fusion_cpp", (DL_FUNC) &_ConvexHullLeyth_fusion_cpp, 2},
+    {"_ConvexHullLeyth_trifusion_cpp", (DL_FUNC) &_ConvexHullLeyth_trifusion_cpp, 1},
+    {"_ConvexHullLeyth_listAngle_cpp", (DL_FUNC) &_ConvexHullLeyth_listAngle_cpp, 1},
+    {"_ConvexHullLeyth_min_X_cpp", (DL_FUNC) &_ConvexHullLeyth_min_X_cpp, 1},
+    {"_ConvexHullLeyth_produit_vect_cpp", (DL_FUNC) &_ConvexHullLeyth_produit_vect_cpp, 3},
+    {"_ConvexHullLeyth_next_point_cpp", (DL_FUNC) &_ConvexHullLeyth_next_point_cpp, 2},
+    {"_ConvexHullLeyth_env_convex_javis_cpp", (DL_FUNC) &_ConvexHullLeyth_env_convex_javis_cpp, 1},
     {"_ConvexHullLeyth_rcpp_hello_world", (DL_FUNC) &_ConvexHullLeyth_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };

@@ -19,14 +19,17 @@ produit_vectoriel<-function(A, B, C)
   return (q)
 }
 
+
 next_point<-function(X,i){
   if (i==1) {k=2}  # on initialise par un vecteur autre que i
   else {k=1}
-  for (j in 1:length(X[,1]))
+  for (j in 1:length(X[,1])){
     if (produit_vectoriel(X[i,],X[j,],X[k,])>0)
     {k=j}
+  }
   return (k)
 }
+
 
 env_conv <- function(X){
   first = min_X(X)
@@ -42,3 +45,4 @@ env_conv <- function(X){
     res[i,] = X[env[i],]
   return (res)
 }
+

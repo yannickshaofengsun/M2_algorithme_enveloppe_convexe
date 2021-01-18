@@ -5,8 +5,32 @@ col_erase2 <- function(x, colID) {
     .Call(`_ConvexHullLeyth_col_erase2`, x, colID)
 }
 
-naif_convex_rcpp <- function(list) {
-    .Call(`_ConvexHullLeyth_naif_convex_rcpp`, list)
+fusion_cpp <- function(m1, m2) {
+    .Call(`_ConvexHullLeyth_fusion_cpp`, m1, m2)
+}
+
+trifusion_cpp <- function(t) {
+    .Call(`_ConvexHullLeyth_trifusion_cpp`, t)
+}
+
+listAngle_cpp <- function(l) {
+    .Call(`_ConvexHullLeyth_listAngle_cpp`, l)
+}
+
+min_X_cpp <- function(X) {
+    .Call(`_ConvexHullLeyth_min_X_cpp`, X)
+}
+
+produit_vect_cpp <- function(A, B, C) {
+    .Call(`_ConvexHullLeyth_produit_vect_cpp`, A, B, C)
+}
+
+next_point_cpp <- function(X, i) {
+    .Call(`_ConvexHullLeyth_next_point_cpp`, X, i)
+}
+
+env_convex_javis_cpp <- function(X) {
+    .Call(`_ConvexHullLeyth_env_convex_javis_cpp`, X)
 }
 
 rcpp_hello_world <- function() {
