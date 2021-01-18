@@ -5,9 +5,32 @@
 
 using namespace Rcpp;
 
+// col_erase2
+NumericMatrix col_erase2(NumericMatrix x, int colID);
+RcppExport SEXP _ConvexHullLeyth_col_erase2(SEXP xSEXP, SEXP colIDSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type x(xSEXP);
+    Rcpp::traits::input_parameter< int >::type colID(colIDSEXP);
+    rcpp_result_gen = Rcpp::wrap(col_erase2(x, colID));
+    return rcpp_result_gen;
+END_RCPP
+}
+// naif_convex_rcpp
+NumericMatrix naif_convex_rcpp(NumericMatrix list);
+RcppExport SEXP _ConvexHullLeyth_naif_convex_rcpp(SEXP listSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type list(listSEXP);
+    rcpp_result_gen = Rcpp::wrap(naif_convex_rcpp(list));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
-RcppExport SEXP _ConvexHull_rcpp_hello_world() {
+RcppExport SEXP _ConvexHullLeyth_rcpp_hello_world() {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -17,11 +40,13 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_ConvexHull_rcpp_hello_world", (DL_FUNC) &_ConvexHull_rcpp_hello_world, 0},
+    {"_ConvexHullLeyth_col_erase2", (DL_FUNC) &_ConvexHullLeyth_col_erase2, 2},
+    {"_ConvexHullLeyth_naif_convex_rcpp", (DL_FUNC) &_ConvexHullLeyth_naif_convex_rcpp, 1},
+    {"_ConvexHullLeyth_rcpp_hello_world", (DL_FUNC) &_ConvexHullLeyth_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_ConvexHull(DllInfo *dll) {
+RcppExport void R_init_ConvexHullLeyth(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }

@@ -1,4 +1,5 @@
 angle_2dim = function(l){                          
+  if (length(l[1,]>2)){
   l_ordonnée=l[2,]
   i=1
   j=c(1)
@@ -56,6 +57,8 @@ angle_2dim = function(l){
     list_angle=t(list_angle)
   }
   return(list_angle)
+  }
+  return(l)
 }
 
 
