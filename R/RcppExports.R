@@ -33,6 +33,10 @@ env_convex_javis_cpp <- function(X) {
     .Call(`_ConvexHullLeyth_env_convex_javis_cpp`, X)
 }
 
+naif_convex_rcpp <- function(list) {
+    .Call(`_ConvexHullLeyth_naif_convex_rcpp`, list)
+}
+
 rcpp_hello_world <- function() {
     .Call(`_ConvexHullLeyth_rcpp_hello_world`)
 }
