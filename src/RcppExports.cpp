@@ -98,6 +98,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// naif_convex_rcpp
+NumericMatrix naif_convex_rcpp(NumericMatrix list);
+RcppExport SEXP _ConvexHullLeyth_naif_convex_rcpp(SEXP listSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< NumericMatrix >::type list(listSEXP);
+    rcpp_result_gen = Rcpp::wrap(naif_convex_rcpp(list));
+    return rcpp_result_gen;
+END_RCPP
+}
 // rcpp_hello_world
 List rcpp_hello_world();
 RcppExport SEXP _ConvexHullLeyth_rcpp_hello_world() {
@@ -118,6 +129,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_ConvexHullLeyth_produit_vect_cpp", (DL_FUNC) &_ConvexHullLeyth_produit_vect_cpp, 3},
     {"_ConvexHullLeyth_next_point_cpp", (DL_FUNC) &_ConvexHullLeyth_next_point_cpp, 2},
     {"_ConvexHullLeyth_env_convex_javis_cpp", (DL_FUNC) &_ConvexHullLeyth_env_convex_javis_cpp, 1},
+    {"_ConvexHullLeyth_naif_convex_rcpp", (DL_FUNC) &_ConvexHullLeyth_naif_convex_rcpp, 1},
     {"_ConvexHullLeyth_rcpp_hello_world", (DL_FUNC) &_ConvexHullLeyth_rcpp_hello_world, 0},
     {NULL, NULL, 0}
 };
