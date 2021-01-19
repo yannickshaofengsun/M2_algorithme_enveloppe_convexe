@@ -3,4 +3,13 @@ dessin_ordre(M)                  # Affiche l'ordre de l'angle que font les diff√
 dev.off()
 p=parcours_graham(M)             # Stocke les points de l'enveloppe convexe p.
 p                                # p est la matrice de points de l'enveloppe convexe.
-dessin_env(M)                    # Affiche l'enveloppe convexe.
+dessin_env_graham(M)                    # Affiche l'enveloppe convexe.
+dessin_env_javis(M)
+dessin_env_naif(M)
+
+temps_graham(M)
+temps_graham_rcpp(M)
+temps_naive_rcpp(M)
+temps_naive(M)
+temps_javis_r(M)
+temps_javis_rcpp(M)

@@ -14,5 +14,5 @@ temps_r_cpp <- function(n){
     t_cpp = t_cpp + end_time_cpp - start_time_cpp
     i=i+1
   }
-  return(t_r/t_cpp)
+  return(t_r/ t_cpp)
 }
