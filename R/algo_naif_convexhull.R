@@ -89,6 +89,7 @@ env_convex_naif <- function(list,t){
   }
   return(f)
 }
+
 dessin_env_naif <- function(l){
   env=env_convex_naif(l)
   plot(l[1,],l[2,])
