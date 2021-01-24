@@ -21,7 +21,7 @@ La marche de Jarvis est un algorithme itératif et récursif. Il consiste en tro
 
 **Etape 1** : 
 
-Premièrement on détermine le premier point X~0~ H~3~PO~4~ de l’enveloppe ou point pivot. Nous prenons le point d’abscisse minimal ou point le plus à gauche. Si plusieurs points sont d’abscisse minimal alors on prend parmi eux le point d’ordonné minimal. Cette fonction est appelée `min_X` dans notre package.
+Premièrement on détermine le premier point `X_0` de l’enveloppe ou point pivot. Nous prenons le point d’abscisse minimal ou point le plus à gauche. Si plusieurs points sont d’abscisse minimal alors on prend parmi eux le point d’ordonné minimal. Cette fonction est appelée `min_X` dans notre package.
 
 ```{r}
 min_X<-function(X){
@@ -42,8 +42,8 @@ X[a,]
 
 $\texttt{Etape 2}$ : 
 
-Ensuite, on cherche le nouveau point X~i~ avec i entre 1 et h, qui suit le précédent point de l’enveloppe convexe trouvé (h étant le nombre de points de l’enveloppe convexe). Ce point doit minimiser l’angle formé par X~i~X~i-1~ avec X~i-2~ X~i-1~. 
-Pour vérifier cette condition, nul besoin de calculer l’angle formé par ces segments. Pour ce faire, il suffit juste de calculer le produit vectoriel des vecteurs définis par les points X~i~(a~i~,b~i~), X~i-1~(a~i-1~,b~i-1~) et  X~i-2~ (a~i-2~,b~i-2~). Le produit vectoriel est donné par :
+Ensuite, on cherche le nouveau point `X_i` avec i entre 1 et h, qui suit le précédent point de l’enveloppe convexe trouvé (h étant le nombre de points de l’enveloppe convexe). Ce point doit minimiser l’angle formé par `X_i X_{i-1}` avec `X_{i-2}X_{i-1}`.
+Pour vérifier cette condition, nul besoin de calculer l’angle formé par ces segments. Pour ce faire, il suffit juste de calculer le produit vectoriel des vecteurs définis par les points `X_i (a_i,b_i)`, `X_{i-1} (a_{i-1},b_{i-1})` et  `X_{i-2} (a_{i-2},b_{i-2})`. Le produit vectoriel est donné par :
 
 $$\begin{array}
 pv = (a_{i-2} - a_{i-1})( b_{i} - b_{i-1}) - (b_{i-2} - b_{i-1})( a_{i} - a_{i-1})
