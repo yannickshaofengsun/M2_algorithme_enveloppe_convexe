@@ -111,7 +111,7 @@ plot(X,pch=19,main = "Enveloppe convexe des points affichés")
 lines(env_conv(X),col = "red")
 ```
 
-$\texttt{Etude de la complexité}$ :
+$\text tt{Etude de la complexité}$ :
 
 Soit n le nombre total de points considérés et h le nombre de points formant l’enveloppe convexe.
 La première étape de l’algorithme recherche le point pivot ou le premier point qu’on sait appartenir à l’enveloppe convexe puisqu’il est le plus à gauche par exemple (fonction min_X). Cette étape est de complexité $O(1)$.
