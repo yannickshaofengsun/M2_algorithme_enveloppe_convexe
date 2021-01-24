@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.com/vrunge/M2algorithmique.svg?branch=main)](https://travis-ci.com/vrunge/M2Algorithmique)
 
 # Description des Algorithmes"
 
