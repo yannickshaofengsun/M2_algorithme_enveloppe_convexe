@@ -21,7 +21,7 @@ La marche de Jarvis est un algorithme itératif et récursif. Il consiste en tro
 
 **Etape 1** : 
 
-Premièrement on détermine le premier point X~0~ de l’enveloppe ou point pivot. Nous prenons le point d’abscisse minimal ou point le plus à gauche. Si plusieurs points sont d’abscisse minimal alors on prend parmi eux le point d’ordonné minimal. Cette fonction est appelée `min_X` dans notre package.
+Premièrement on détermine le premier point X~0~ H~3~PO~4~ de l’enveloppe ou point pivot. Nous prenons le point d’abscisse minimal ou point le plus à gauche. Si plusieurs points sont d’abscisse minimal alors on prend parmi eux le point d’ordonné minimal. Cette fonction est appelée `min_X` dans notre package.
 
 ```{r}
 min_X<-function(X){
