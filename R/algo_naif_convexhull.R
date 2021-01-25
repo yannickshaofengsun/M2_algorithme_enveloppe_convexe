@@ -35,11 +35,11 @@ env_convex_naif <- function(list,t){
           }}
         if (cnt_pos==length(l)){
           f=c(f,v1)
-          lines(c(v1[1],v2[1]),c(v1[2],v2[2]),'l')
+          #lines(c(v1[1],v2[1]),c(v1[2],v2[2]),'l')
         }
         if (cnt_neg==length(l)){
           f=c(f,v1)
-          lines(c(v1[1],v2[1]),c(v1[2],v2[2]),'l')
+          #lines(c(v1[1],v2[1]),c(v1[2],v2[2]),'l')
         }
         
       }
