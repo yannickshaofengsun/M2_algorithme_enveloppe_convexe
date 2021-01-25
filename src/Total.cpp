@@ -110,16 +110,16 @@ NumericMatrix listAngle_cpp(NumericMatrix l){
   while (i < l(0, _).size()){
     double i_const = i;
     if (i_const == j_mins){
-      NumericVector temp1 = {R_NaN, i_const};
+      NumericVector temp1 = {R_NaN, i_const + 1};
       list_angle(_,i_const) = temp1;
       na_list.push_back(i);
     }
     else if (l(0,i_const) == p[0]){
-      NumericVector temp2 = {R_PosInf, i_const};
+      NumericVector temp2 = {R_PosInf, i_const + 1};
       list_angle(_,i_const) = temp2;
     }
     else {
-      NumericVector temp3 = {(l(1, i_const)-p[1])/(l(0, i_const)-p[0]), i_const};
+      NumericVector temp3 = {(l(1, i_const)-p[1])/(l(0, i_const)-p[0]), i_const + 1};
       list_angle(_,i_const)=temp3;
     }
     i++;
