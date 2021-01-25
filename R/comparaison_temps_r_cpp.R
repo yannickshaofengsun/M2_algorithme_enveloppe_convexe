@@ -15,7 +15,7 @@ temps_r_cpp <- function(n){
     javis = c(javis, temps_javis_r(list))
     javis_c = c(javis_c, temps_javis_rcpp(list))
   }
-  df = data.frame( "Grham_r" = graham, "Graham_c++" = graham_c,
+  df = data.frame( "Graham_r" = graham, "Graham_c++" = graham_c,
                    "naive_r" = naive, "naivs_c++" = naive_c,
                    "javis_r" = javis, "javis_c++" = javis_c)
   return(df)
