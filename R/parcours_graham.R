@@ -50,7 +50,7 @@ dessin_env_javis <- function(l){
 }
 
 dessin_env_naiv<- function(l){
-  p=t(env_convex_javis_cpp(t(l)))
+  p=env_convex_naif(l)
   plot(l[1,], l[2,],
        xlab = "x", ylab = "y",main = "Enveloppe convexe des points affichés par methode naif",
        pch = 19, frame = FALSE)
