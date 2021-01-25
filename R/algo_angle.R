@@ -1,20 +1,20 @@
 angle_2dim = function(l){                          
   if (length(l[1,]>2)){
-  l_ordonnée=l[2,]
+  l_ordonne=l[2,]
   i=1
   j=c(1)
-  min=l_ordonnée[1]
-  while (i<length(l_ordonnée)+1){
-    if (min>l_ordonnée[i]){
-      min=l_ordonnée[i]
+  min=l_ordonne[1]
+  while (i<length(l_ordonne)+1){
+    if (min>l_ordonne[i]){
+      min=l_ordonne[i]
       j=c(i)
     }
     i=i+1
   }
   i=1
   mins=c()
-  while (i<length(l_ordonnée)+1){
-    if (min==l_ordonnée[i]){
+  while (i<length(l_ordonne)+1){
+    if (min==l_ordonne[i]){
       mins=c(mins,i)
     }
     i=i+1
