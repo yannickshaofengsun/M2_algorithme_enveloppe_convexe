@@ -90,9 +90,3 @@ env_convex_naif <- function(list,t){
   return(f)
 }
 
-dessin_env_naif <- function(l){
-  env=env_convex_naif(l)
-  plot(l[1,],l[2,])
-  lines(env[1,],env[2,],'l')
-  lines(c(env[1,length(env[1,])],env[1,1]),c(env[2,length(env[1,])],env[2,1]),'l')
-}
