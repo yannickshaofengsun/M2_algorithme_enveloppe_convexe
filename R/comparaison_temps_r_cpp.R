@@ -6,7 +6,7 @@ temps_r_cpp <- function(n){
   naive_c = {}
   javis = {}
   javis_c ={}
-  for (i in 1:n){
+  for (i in 3:n){
     list=matrix( runif( 2 * i), nrow=2)
     graham = c(graham, temps_graham(list))
     graham_c = c(graham_c,  temps_graham_rcpp(list))
