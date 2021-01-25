@@ -1,17 +1,22 @@
 temps_r_cpp <- function(n){
-  i=1
-  t_r=0
-  t_cpp=0
-  while (i<n){
+  dt = data.frame()
+  graham = {}
+  graham_c = {}
+  naive = {}
+  naive_c = {}
+  javis = {}
+  javis_c ={}
+  for (i in 1:n){
     list=matrix( runif( 2 * i), nrow=2)
-    start_time_r= system.time()
-    env_convex_naif(list)
-    end_time_r=system.time()
-    t_r = t_r + end_time_r - start_time_r
-    start_time_cpp= system.time()
-    naif_convex_rcpp(list)
-    end_time_cpp=system.time()
-    t_cpp = t_cpp + end_time_cpp - start_time_cpp
+    graham = c(graham, temps_graham(list))
+    graham_c = c(graham_c,  temps_graham_rcpp(list))
+    naive = c(naive, temps_naive(list))
+    naive_c = c(naive_c, temps_naive_rcpp(list))
+    javis = c(javis, temps_javis_r(list))
+    javis_c = c(javis_c, temps_javis_rcpp(list))
   }
-  return(t_r/t_cpp)
+  df = data.frame( "Grham_r" = graham, "Graham_c++" = graham_c,
+                   "naive_r" = naive, "naivs_c++" = naive_c,
+                   "javis_r" = javis, "javis_c++" = javis_c)
+  return(df)
 }
