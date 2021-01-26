@@ -4,7 +4,7 @@ env_convex_naif <- function(list,t){
   i=1
   bonx=c()
   bony=c()
-  plot(M[1,],M[2,])
+  #plot(M[1,],M[2,])
   while (i<length(M[1,])+1){
     l=c()
     v1=c(M[,i])
